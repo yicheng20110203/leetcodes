@@ -115,3 +115,6 @@ for ($i = 0; $i < count($mapValue); $i++) {
 
 printf("result = %d\n", $ret);
 
+// output:
+// result = 807
+
