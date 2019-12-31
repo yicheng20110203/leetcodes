@@ -29,6 +29,7 @@ class CalSortedArrayAvgValue
 
     /**
      * O(m+n)
+     * 两个有序数组的中位数一定在(m + n)/2 + 1之间
      * @return float
      */
     public function calMiddleValue(): float
