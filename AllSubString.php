@@ -12,6 +12,10 @@ class AllSubString
         $this->_str = $str;
     }
 
+    /**
+     * 滑动窗口法
+     * @return array
+     */
     public function getAllSubStrings(): array
     {
         $n = strlen($this->_str);
