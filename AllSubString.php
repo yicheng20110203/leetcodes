@@ -39,11 +39,21 @@ class AllSubString
             }
         }
 
-        print_r($maps);
-
         return array_values(array_unique($maps));
     }
 }
 
-$result = (new AllSubString("page"))->getAllSubStrings();
+$result = (new AllSubString("abc"))->getAllSubStrings();
 print_r($result);
+
+// output
+//Array
+//(
+//    [0] => a
+//    [1] => ab
+//    [2] => abc
+//    [3] => ac
+//    [4] => b
+//    [5] => bc
+//    [6] => c
+//)
