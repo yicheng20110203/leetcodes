@@ -110,7 +110,7 @@ class SlideWindow
                 $c[$this->getStr()[$j]] = $j;
 
                 // special process
-                if ($j + 1 - $i >= $maxLen) {
+                if ($j - $i + 1 >= $maxLen) {
                     $maxSubStringMap[$j - $i][] = [$i, $j];
                 }
 
