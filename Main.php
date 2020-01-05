@@ -30,6 +30,23 @@ class Main {
         $data = $obj->run();
         $obj->print($data);
     }
+
+    public function testSearchRighMaxNumAndReplace()
+    {
+        $obj = new SearchRighMaxNumAndReplace([17,18,5,4,6,1]);
+        $data = $obj->run();
+        $obj->print($data);
+    }
+
+    public function testSearchMaxAscReq()
+    {
+        //$obj = new SearchMaxAscSeq([1,3,5,4,7]);
+        $obj = new SearchMaxAscSeq([2,2,2,2,2]);
+        $obj->run();
+        $obj->print();
+    }
 }
 
-(new Main())->testMaxSameSubStringInAnyPlace();
+//(new Main())->testMaxSameSubStringInAnyPlace();
+//(new Main())->testSearchRighMaxNumAndReplace();
+(new Main())->testSearchMaxAscReq();
