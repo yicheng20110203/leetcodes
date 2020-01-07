@@ -45,8 +45,60 @@ class Main {
         $obj->run();
         $obj->print();
     }
+
+    public function testJudgeListNodeIsBackWord()
+    {
+        $obj = new JudgeListNodeIsBackWord(
+            (new ListNode())->setVal(1)->setNext((new ListNode())->setVal(2)->setNext((new ListNode())->setVal(3)->setNext(null)))
+        );
+        $obj->run();
+        $obj->print();
+    }
+
+    public function testSearchNTreeNodeDepth()
+    {
+        $obj = new SearchNTreeNodeDepth(
+            (new NTreeNode())->setVal(1)->setNode([
+                (new NTreeNode())->setVal(3)->setNode([
+                    (new NTreeNode())->setVal(5)->setNode([]),
+                    (new NTreeNode())->setVal(6)->setNode([]),
+                ]),
+                (new NTreeNode())->setVal(2)->setNode([
+                    (new NTreeNode())->setVal(6)->setNode([
+                        (new NTreeNode())->setVal(5)->setNode([
+                            (new NTreeNode())->setVal(5)->setNode([]),
+                            (new NTreeNode())->setVal(6)->setNode([]),
+                        ]),
+                        (new NTreeNode())->setVal(6)->setNode([]),
+                    ]),
+                ]),
+                (new NTreeNode())->setVal(4)->setNode([]),
+            ])
+        );
+        $obj->run();
+        $obj->print();
+    }
+
+    public function testMaxSwingSeq()
+    {
+        $obj = new MaxSwingSeq([1,17,5,10,13,15,10,5,16,8]);
+        //$obj = new MaxSwingSeq([1,7,4,9,2,5]);
+        $obj->run();
+        $obj->print();
+    }
+
+    public function testTrie()
+    {
+        $obj = new Trie(['hello', 'world', 'java', 'how', 'old', 'are', 'you'], ['how', 'must', 'you']);
+        $obj->run();
+        $obj->print();
+    }
 }
 
 //(new Main())->testMaxSameSubStringInAnyPlace();
 //(new Main())->testSearchRighMaxNumAndReplace();
-(new Main())->testSearchMaxAscReq();
+//(new Main())->testSearchMaxAscReq();
+//(new Main())->testJudgeListNodeIsBackWord();
+//(new Main())->testSearchNTreeNodeDepth();
+//(new Main())->testMaxSwingSeq();
+(new Main())->testTrie();

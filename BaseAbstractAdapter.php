@@ -11,11 +11,12 @@ abstract class BaseAbstractAdapter implements BaseInterface
     private $_beginExecuteTime = 0;
     private $_afterExecuteTime = 0;
     private $_processData = null;
+    private $_processReturnData = null;
 
     public function run()
     {
         $this->beforeProcess();
-        $this->process();
+        $this->_processReturnData = $this->process();
         $this->afterProcess();
     }
 
@@ -43,6 +44,9 @@ abstract class BaseAbstractAdapter implements BaseInterface
     {
         if ($data == null) {
             $data = $this->getProcessData();
+            if ($data == null) {
+                $data = $this->_processReturnData;
+            }
         }
 
         echo 'Execute time ', sprintf("%.4f ms", $this->_afterExecuteTime - $this->_beginExecuteTime), PHP_EOL;
