@@ -93,6 +93,14 @@ class Main {
         $obj->run();
         $obj->print();
     }
+
+    public function testMinArea()
+    {
+        //$obj = new MinArea([[1,1],[1,3],[3,1],[3,3],[2,2]]);
+        $obj = new MinArea([[1,1],[1,3],[3,1],[3,3],[4,1],[4,3]]);
+        $obj->run();
+        $obj->print();
+    }
 }
 
 //(new Main())->testMaxSameSubStringInAnyPlace();
@@ -101,4 +109,5 @@ class Main {
 //(new Main())->testJudgeListNodeIsBackWord();
 //(new Main())->testSearchNTreeNodeDepth();
 //(new Main())->testMaxSwingSeq();
-(new Main())->testTrie();
+//(new Main())->testTrie();
+(new Main())->testMinArea();
