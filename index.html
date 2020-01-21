@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dy resume</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	 
+	<style type="text/css">
+		body{ background: #25303b;padding: 2em 0; }
+		.main-timeline{
+		    width: 80%;
+		    margin: 20px auto;
+		    position: relative;
+		}
+		.main-timeline:before{
+		    content: "";
+		    display: block;
+		    width: 2px;
+		    height: 100%;
+		    background: rgba(255,255,255,0.2);
+		    margin: 0 0 0 -1px;
+		    position: absolute;
+		    top: 0;
+		    left: 50%;
+		}
+		.main-timeline .timeline{
+		    width: 100%;
+		    margin-bottom: 20px;
+		    position: relative;
+		}
+		.main-timeline .timeline:after{
+		    content: "";
+		    display: block;
+		    clear: both;
+		}
+		.main-timeline .timeline-content{
+		    width: 40%;
+		    float: left;
+		    margin: 5px 0 0 0;
+		    border-radius: 6px;
+		}
+		.main-timeline .date{
+		    display: block;
+		    width: 100px;
+		    height: 100px;
+		    border-radius: 50%;
+		    background: #25303b;
+		    padding: 35px 0;
+		    margin: 0 0 0 -51px;
+		    position: absolute;
+		    top: 0;
+		    left: 50%;
+		    font-size: 12px;
+		    font-weight: 900;
+		    text-transform: uppercase;
+		    color: rgba(255,255,255,0.5);
+		    border: 2px solid rgba(255,255,255,0.2);
+		    box-shadow: 0 0 0 7px #25303b;
+		}
+		.main-timeline .date span{
+		    display: block;
+		    text-align: center;
+		}
+		.main-timeline .day,
+		.main-timeline .year{
+		    font-size: 10px;
+		}
+		.main-timeline .month{
+		    font-size: 18px;
+		}
+		.main-timeline .title{
+		    padding: 15px;
+		    margin: 0;
+		    font-size: 20px;
+		    color: #fff;
+		    text-transform: uppercase;
+		    letter-spacing: -1px;
+		    border-radius: 6px 6px 0 0;
+		    position: relative;
+		}
+		.main-timeline .title:after{
+		    content: "";
+		    width: 10px;
+		    height: 10px;
+		    position: absolute;
+		    top: 20px;
+		    right: -5px;
+		    transform: rotate(-45deg);
+		}
+		.main-timeline .description{
+		    padding: 15px;
+		    margin: 0;
+		    font-size: 14px;
+		    color: #656565;
+		    background: #fff;
+		    border-radius: 0 0 6px 6px;
+		}
+		.main-timeline .timeline:nth-child(2n+2) .timeline-content{
+		    float: right;
+		}
+		.main-timeline .timeline:nth-child(2n+2) .title:after{
+		    left: -5px;
+		}
+		.main-timeline .timeline:nth-child(1) .title,
+		.main-timeline .timeline:nth-child(1) .title:after{
+		    background: #9f84c4;
+		}
+		.main-timeline .timeline:nth-child(2) .title,
+		.main-timeline .timeline:nth-child(2) .title:after{
+		    background: #02a2dd;
+		}
+		.main-timeline .timeline:nth-child(3) .title,
+		.main-timeline .timeline:nth-child(3) .title:after{
+		    background: #58b25e;
+		}
+		.main-timeline .timeline:nth-child(4) .title,
+		.main-timeline .timeline:nth-child(4) .title:after{
+		    background: #eab715;
+		}
+		.main-timeline .timeline:nth-child(5) .title,
+		.main-timeline .timeline:nth-child(5) .title:after{
+		    background: #6e6135;
+		}
+		.main-timeline .timeline:nth-child(6) .title,
+		.main-timeline .timeline:nth-child(6) .title:after{
+		    background: #38268b;
+		}
+		.main-timeline .timeline:nth-child(7) .title,
+		.main-timeline .timeline:nth-child(7) .title:after{
+		    background: #70213b;
+		}
+		.table-spe {
+			border: 0;
+		}
+		@media only screen and (max-width: 990px){
+		    .main-timeline{ width: 100%; }
+		}
+		@media only screen and (max-width: 767px){
+		    .main-timeline:before,
+		    .main-timeline .date{
+		        left: 6%;
+		    }
+		    .main-timeline .timeline-content{
+		        width: 85%;
+		        float: right;
+		    }
+		    .main-timeline .title:after{
+		        left: -5px;
+		    }
+		}
+		@media only screen and (max-width: 480px){
+		    .main-timeline:before,
+		    .main-timeline .date{
+		        left: 12%;
+		    }
+		    .main-timeline .timeline-content{
+		        width: 75%;
+		    }
+		    .main-timeline .date{
+		        width: 60px;
+		        height: 60px;
+		        margin-left: -30px;
+		    }
+		    .main-timeline .month{
+		        font-size: 14px;
+		    }
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    <div class="timeline">
+                        <div class="timeline-content">
+                            <span class="date">
+                                <span class="month">resume</span>
+                            </span>
+                            <h2 class="title">个人资料</h2>
+                            <div class="description">
+								<table class="table table-bordered"> 
+									<tr>
+										<td><em>姓名</em></td>
+										<td>丁勇</td>
+									</tr>
+									<tr>
+										<td><em>手机号</em></td>
+										<td>18916434200</td>
+									</tr>
+									<tr>
+										<td><em>邮箱</em></td>
+										<td>674621465@qq.com</td>
+									</tr>
+									<tr>
+										<td><em>学历</em></td>
+										<td>
+											<table class="table table-spe">
+												<tr class="success">
+													<td><em>本科</em></td>
+													<td>中南大学</td>
+													<td>测控技术与仪器</td>
+												</tr>
+												<tr class="danger">
+													<td><em>研究生</em></td>
+													<td>中南大学</td>
+													<td>控制科学与工程</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td><em>技能</em></td>
+										<td>
+											<table class="table table-spe">
+												<tr>
+													<td><em><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"> 熟练使用php、go及常用框架</span></em></td>
+												</tr>
+												<tr>
+													<td><em><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"> 具有一定的java、C编程能力</span></em></td>
+												</tr>
+												<tr>
+													<td><em><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"> 理解常用的数据结构及算法</span></em></td>
+												</tr>
+												<tr>
+													<td><em><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"> MVC、微服务、docker/k8s</span></em></td>
+												</tr>
+												<tr>
+													<td><em><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"> redis、memcache、etcd、mysql</span></em></td>
+												</tr>
+												<tr>
+													<td><em><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"> 使用solr、es、sphinx、多种mq</span></em></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-content">
+                            <span class="date">
+                                <span class="month">2013.07</span>
+                            </span>
+                            <h2 class="title">爱奇艺</h2>
+							<div class="description">
+								<table class="table table-striped">
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>视频后台审核系统开发</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 使用tp3、mysql、php5.3</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> MVC架构，前后端未分离</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 审核权限RBAC</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>H5开发</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 使用js编写活动及web游戏规则</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 调整部分h5页面样式</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>参与天工运维系统开发</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 使用Yii1.2开发，构建组件</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 了解天工系统需求，开发机架管理模块</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></td>
+										<td><em>Learning Skills</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> apache</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> php多进程、内存分配模型</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> mysql</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> redis</p>
+										</td>
+									</tr>
+								</table>
+						    </div>
+                        </div>
+					</div>
+					
+					<div class="timeline">
+                        <div class="timeline-content">
+                            <span class="date">
+                                <span class="month">2014.10</span>
+                            </span>
+                            <h2 class="title">安居客</h2>
+							<div class="description">
+								<table class="table table-striped">
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>全站SEO优化</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 重构内链服务，200ms->15ms</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 根据关键词、内链、外链、SEM手段</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>租房列表页改造</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 搜索引擎从solr迁移到58自研ESearch</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 完成前后端改造Task并完全兼容老的业务</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 主要使用了solr,php5.5,mysql,biz/dto,nginx</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>商业地产改造</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 商业地产已有业务梳理，找到历史mysql库表</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 设计部分迁移后的表，完成操作封装</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 商业底层内链二次开发</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></td>
+										<td><em>Learning Skills</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Linux/vim操作</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> docker、nginx</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> solr/rabbitmq使用</p>
+											<p><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 开始接触分布式系统</p>
+										</td>
+									</tr>
+								</table>
+						    </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-content">
+                            <span class="date">
+                                <span class="month">2015.11</span>
+                            </span>
+                            <h2 class="title">边锋科技</h2>
+							<div class="description">
+								<table class="table table-striped">
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>飞火电竞APP后端工作</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 框架选型(yii2)，二次封装</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 搜索引擎选型(sphinx)做全文索引和GEO搜索</p>
+											<p><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 采用队列beanstalkd异步投递日志事件</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> App后端接口开发</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 多重用户系统打通，并迭代几次</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 生产环境两台服务器维护</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>网吧业务开发</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 自研mvc框架，由于网吧项目为微信公众号服务，属于轻量级</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 完成了正则匹配路由规则</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 自动加载、命名空间实现</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 基于pdo的增删改查操作封装</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>其他业务系统</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 开发H5活动后台及部分前端功能</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 运营CMS后台开发</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 基于RBAC后台权限管理</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></td>
+										<td><em>Learning Skills</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> sphinx, beanstalkd</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> linux运维基础</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 基于静态缓存和异步实现较高的并发</p>
+											<p><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 开发简易mvc框架</p>
+										</td>
+									</tr>
+								</table>
+						    </div>
+                        </div>
+					</div>
+					
+					<div class="timeline">
+                        <div class="timeline-content">
+                            <span class="date">
+                                <span class="month">2019.03</span>
+                            </span>
+                            <h2 class="title">中欧国际文化传播有限公司</h2>
+							<div class="description">
+								<table class="table table-striped">
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>Saas平台重构</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 基于Yii2二次封装</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 日志系统设计及开发，在Rabbmit基础上实现</p>
+											<p><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 用户多终端同时在线登录系统开发</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 用户权限管理系统开发RBPAC，toB需求决定了RBAC不再是最佳选择，power基础上打包一层更适合</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 超级管理员权限逻辑开发</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 已授权的企业客户批量增加平台新权限功能开发</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 基于yaconf扩展、casbin、bootstrap实现后台更新db/redis/mq等其他业务配置预加载，解耦业务代码和配置</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>Saas平台报表重构</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 选型ES作为实时计算报表的入口数据源</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 基于binlog增量同步数据到hive，hive清洗完数据后按照各个业务es索引的维度同步数据到es</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 结合toB筛选的各种条件对es的多个索引进行检索聚合，再用php去计算汇总数据</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 解决B端在生成大的数据报表期间不断刷新导致MySQL资源耗尽的遗留问题：请求参数去除时间字段后进行排序，生成唯一requestId，以此作为最终报表文件的前缀</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 由于部分报表业务维度错综交叉，导致没法从单一索引获取数据，增加了开发难度，有些报表采用多重聚合外加计算方实现业务需求</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>Saas平台域控模型重构</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 为了角色手动切换给带给用户的烦恼，重写了域控模型</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 抓取前台URL请求，根据URI匹配多角色权限，取max</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> check是否受域控后，并将标识写入入口参数模型，下游服务根据这个标识判断业务流程</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></td>
+										<td><em>Learning Skills</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> es、hive</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> docker搭建开发环境，拆分redis、mysql、nginx等容器，容器内部网路通信</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> io模型、php配置优化</p>
+											<p><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 初步认知微服务</p>
+										</td>
+									</tr>
+								</table>
+						    </div>
+                        </div>
+					</div>
+					
+					<div class="timeline">
+                        <div class="timeline-content">
+                            <span class="date">
+                                <span class="month">2019.03</span>
+                            </span>
+                            <h2 class="title">趣头条（go开发）</h2>
+							<div class="description">
+								<table class="table table-striped">
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>负责金融业务三套商品管理</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Api全流出商品高度可配置，适应所有合作伙伴业务模式，采用golang动态解析商品流程</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 对外提供稳定的GRPC商品服务，后台也调用该服务，统筹对外接口标准定制</p>
+											<p><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 对接N家金融平台商品</p>
+											<p><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 采用GRPC + Gateway，gorm实现</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+										<td><em>短信通道自动切换服务</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 实现通道自动切换，保证只要有一家服务商可用即可实现短信发送</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 通过异步回调及定时查询，保证短信发送状态准确性，减少多发漏发问题</p>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></td>
+										<td><em>Learning Skills</em></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> go、go内存分配、go协程调度模型、grpc、gorm</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 微服务如何分层</p>
+											<p> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 接触并学习微服务发现/注册、熔断、限流、调用链追踪（etcd/consul/opentrace等）</p>
+											<p><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 学习k8s、service mesh</p>
+										</td>
+									</tr>
+								</table>
+						    </div>
+                        </div>
+					</div>
+					
+					<div class="timeline">
+                        <div class="timeline-content">
+                            <span class="date">
+                                <span class="month">2019.12</span>
+                            </span>
+                            <h2 class="title">离职</h2>
+							<div class="description">Less is more!</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+	
+</body>
+</html>
